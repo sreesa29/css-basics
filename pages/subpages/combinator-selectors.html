@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Combinator Selectors :: Sree Sankar</title>
+  </head>
+  <body>
+    <h1 class="pageHead">CSS Combinators</h1>
+    <h3 class="underlining">
+      A combinator is something that explains the relationship between the
+      selectors. A CSS selector can contain more than one simple selector.
+      Between the simple selectors, we can include a combinator.
+    </h3>
+    <h3>There are four different combinators in CSS:</h3>
+    <p>Let's crack this</p>
+    <div style="overflow-x: auto">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>How to represent?</th>
+          <th>Example code for CSS</th>
+          <th>Example code for HTML</th>
+          <th>Usage</th>
+        </tr>
+        <!-- descendant -->
+        <tr>
+          <td>Descendant Selector (SPACE)</td>
+          <td>element element</td>
+          <td>
+            <pre>
+              <code>
+ div p{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;div&gt;
+
+  &lt;p&gt;Paragraph 1 in the div.
+  &lt;/p&gt; //1
+  &lt;p&gt;Paragraph 2 in the div.
+  &lt;/p&gt; //2
+
+  &lt;section&gt;
+  &lt;p&gt;Paragraph 3 in the div.
+  &lt;/p&gt; //3
+  &lt;/section&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Paragraph 4. Not in a div.
+&lt;/p&gt; //4
+
+&lt;p&gt;Paragraph 5. Not in a div.
+&lt;/p&gt; //5
+              </code>
+            </pre>
+          </td>
+          <td>
+            Here, 1<sup>st</sup>, 2<sup>nd</sup> and 3<sup>rd</sup> &lt;p&gt;
+            tags are inside of the &lt;div&gt; tag (It is called Descendant). So
+            as per the CSS style will apply for the "p" tags inside the "div"
+            tag. So the style will apply for 1,2 and 3 &lt;P&gt; tags. It'll
+            also work for Class and ID.
+          </td>
+        </tr>
+        <!-- descendant close -->
+        <!-- child close  -->
+        <tr>
+          <td>Child Selector (>)</td>
+          <td>element &gt; element</td>
+          <td>
+            <pre>
+              <code>
+ div > p{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;div&gt;
+
+  &lt;p&gt;Paragraph 1 in the div.
+  &lt;/p&gt; //1
+
+  &lt;p&gt;Paragraph 2 in the div.
+  &lt;/p&gt; //2
+
+  &lt;section&gt;
+
+    &lt;p&gt;Paragraph 3 in the div (inside a section element).
+    &lt;/p&gt; //3
+
+  &lt;/section&gt;
+
+  &lt;p&gt;Paragraph 4 in the div.
+  &lt;/p&gt; //4
+
+&lt;/div&gt;
+
+&lt;p&gt;Paragraph 5. Not in a div.
+&lt;/p&gt; //5
+
+&lt;p&gt;Paragraph 6. Not in a div.
+&lt;/p&gt; //6
+              </code>
+            </pre>
+          </td>
+          <td>
+            The child selector (>) selects all elements that are the children of
+            a specified element. Here it select all the "p" tags that are child
+            of the "div" tag. 1<sup>st</sup>, 2<sup>nd</sup> and 4<sup>th</sup>
+            "p" tags are the child, so style will apply on these tags. <br />
+            3<sup>rd</sup>
+            "p" tag is not a child of div, it's descendant; so it'll exclude.
+          </td>
+        </tr>
+        <!-- child close -->
+        <!-- adjacent CLASS -->
+        <tr>
+          <td>Adjacent Sibling Selector (+)</td>
+          <td>element + element</td>
+          <td>
+            <pre>
+              <code>
+ div + p{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;div&gt;
+
+  &lt;p&gt;Paragraph 1 in the div.
+  &lt;/p&gt; //1
+
+&lt;/div&gt;
+
+&lt;p&gt;Paragraph 2. After a div.
+&lt;/p&gt; //2
+
+&lt;p&gt;Paragraph 3. After a div.
+&lt;/p&gt; //3
+
+&lt;div&gt;
+
+  &lt;p&gt;Paragraph 4 in the div.
+  &lt;/p&gt; //4
+
+&lt;/div&gt;
+
+&lt;p&gt;Paragraph 5. After a div.
+&lt;/p&gt; //5
+
+&lt;p&gt;Paragraph 7. After a div.
+&lt;/p&gt; //6
+              </code>
+            </pre>
+          </td>
+          <td>
+            The + selector is used to select an element that is directly after
+            another specific element. Here 2 <sup>nd</sup> and 5
+            <sup>th</sup> are the next door neighbor of the "div" tag, so style
+            will apply on these two "p" tag.
+          </td>
+        </tr>
+        <!-- adjacent + close -->
+        <!-- general sibling ~ -->
+        <tr>
+          <td>General Sibling Selector (~)</td>
+          <td>element ~ element</td>
+          <td>
+            <pre>
+              <code>
+ div ~ p{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;p&gt;Paragraph 1.
+&lt;/p&gt;
+
+&lt;div&gt;
+
+  &lt;p&gt;Paragraph 2.
+  &lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Paragraph 3.
+&lt;/p&gt;
+
+&lt;code&gt;Some code.
+&lt;/code&gt;
+
+&lt;p&gt;Paragraph 4.
+&lt;/p&gt;
+
+              </code>
+            </pre>
+          </td>
+          <td>
+            The general sibling selector (~) selects all elements that are next
+            siblings of a specified element. Here It'll select all the "p" tags
+            that are after the "div" tag. The style will apply on 3<sup>rd</sup>
+            and 4<sup>th</sup> "p" tag.
+          </td>
+        </tr>
+        <!--  close -->
+      </table>
+    </div>
+  </body>
+  <script src="../../style/script.js"></script>
+</html>

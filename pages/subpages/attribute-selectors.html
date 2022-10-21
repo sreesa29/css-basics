@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Attribute Selectors :: Sree Sankar</title>
+  </head>
+  <body>
+    <h1 class="pageHead">Attribute Selectors</h1>
+    <h3 class="underlining">
+      It is possible to style HTML elements that have specific attributes or
+      attribute values.
+    </h3>
+    <p>Let's crack this</p>
+    <div style="overflow-x: auto">
+      <table>
+        <tr>
+          <th>Selector</th>
+          <th>Example</th>
+          <th>Example description</th>
+        </tr>
+        <tr>
+          <td>[attribute]</td>
+          <td>[target]</td>
+          <td>Selects all elements with a target attribute</td>
+        </tr>
+        <tr>
+          <td>[attribute=value]</td>
+          <td>[target=_blank]</td>
+          <td>Selects all elements with target="_blank"</td>
+        </tr>
+        <tr>
+          <td>[attribute~=value]</td>
+          <td>[title~=flower]</td>
+          <td>
+            Selects all elements with a title attribute containing the word
+            "flower"
+          </td>
+        </tr>
+        <tr>
+          <td>[attribute|=value]</td>
+          <td>[lang|=en]</td>
+          <td>
+            Selects all elements with a lang attribute value starting with "en"
+          </td>
+        </tr>
+        <tr>
+          <td>[attribute^=value]</td>
+          <td>a[href^="https"]</td>
+          <td>
+            Selects every &lt;a&gt; element whose href attribute value begins
+            with "https"
+          </td>
+        </tr>
+        <tr>
+          <td>[attribute$=value]</td>
+          <td>a[href$=".pdf"]</td>
+          <td>
+            Selects every &lt;a&gt; element whose href attribute value ends with
+            ".pdf"
+          </td>
+        </tr>
+        <tr>
+          <td>[attribute*=value]</td>
+          <td>a[href*="w3schools"]</td>
+          <td>
+            Selects every &lt;a&gt; element whose href attribute value contains
+            the substring "w3schools"
+          </td>
+        </tr>
+        <tr></tr>
+      </table>
+    </div>
+  </body>
+  <script src="../../style/script.js"></script>
+</html>

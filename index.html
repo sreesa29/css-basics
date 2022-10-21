@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Sree Sankar ::: CSS Basics</title>
+  </head>
+  <body>
+    <!-- head -->
+    <div class="sticky-top">
+      <p class="firstFlexChild">Sree Sankar</p>
+
+      <label class="secondFlexChild"
+        ><input
+          type="checkbox"
+          name="checkbox"
+          id="checkboxD"
+          onchange="lightThemeChnage()"
+        />
+        Dark Theme</label
+      >
+
+      <p
+        class="close-button wobble-hor-top thirdFlexChild"
+        onclick="functionToclose()"
+      >
+        &#x2715;
+      </p>
+    </div>
+    <!-- head end -->
+    <div>
+      <nav>
+        <ul class="navMain">
+          <li class="navItems"><a href="./index.html">Home</a></li>
+          <li class="navItems"><a href="#cssSelectors">CSS Selctors</a></li>
+          <li class="navItems">
+            <a href="./pages/mainpages/intothecss.html">Into the CSS</a>
+          </li>
+          <li class="navItems">
+            <a href="./pages/mainpages/flexbox.html">Flex Box</a>
+          </li>
+          <li class="navItems">
+            <a href="./pages/mainpages/grid.html">Grid</a>
+          </li>
+          <li class="navItems">
+            <a href="./pages/mainpages/cssSheet.html">CSS Sheet</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <h1 class="pageHead">CSS :: Cascading Style Sheet</h1>
+    <h3 class="pageHead">Introduction to CSS</h3>
+
+    <h3 class="underlining">Why are we are using CSS?</h3>
+    <p>CSS (Cascading Style Sheets) is used to style and layout web pages</p>
+    <p>
+      If we consider a webpage is a house; then the structure that we build with
+      brick is called HTML page!
+    </p>
+    <p>
+      If that structure will get new paint or interior design then that's called
+      CSS styling!
+    </p>
+    <h3 class="underlining">How we link CSS in our HTML file?</h3>
+    <p>Using link tag; the link tag must be inside of the &lt;head&gt; tag.</p>
+    <pre>
+    <code>
+  &lt;link rel="stylesheet" href="./style/style.css" /&gt;
+    </code>
+    </pre>
+    <h3 class="underlining">Is there any other type of CSS linking?</h3>
+    <p>
+      Yes! the above mentioned CSS linking method is called External! Other than
+      this method, there are two type of CSS linking, i.e. Inline and Internal.
+    </p>
+    <h4 class="underlining">Let's see Inline method!</h4>
+    <p>
+      After <span class="underlining">external</span> type CSS linking, the
+      second most popular method is the
+      <span class="underlining">inline</span> method, and the
+      <span class="underlining">inline</span> method is also used as a
+      short-hand method! We will use the
+      <span class="underlining">inline</span> method inside the corresponding
+      HTML file, so that we use an HTML attribute called
+      <span class="underlining">style</span>. In
+      <span class="underlining">inline</span> method, we can use multiple css
+      style by using semicolon(;). Let's see an example. Popularly using for
+      styling individual tags.
+    </p>
+    <p class="underlining">Example:</p>
+    <pre>
+    <code>
+  &lt;h2 style="border: 2px solid green; color: red; text-decoration: underline" /&gt;
+   Hey I am an example
+  &lt;h2&gt;
+    </code>
+</pre>
+    <p class="underlining">Result</p>
+    <h2 style="border: 2px solid green; color: red; text-decoration: underline">
+      Hey I am an example
+    </h2>
+    <h4 class="underlining">Let's see Internal method!</h4>
+    <p>
+      <span class="underlining">Internal</span> method is very unpopular method
+      for CSS linking! But still useful for styling one HTML page
+      individually.The <span class="underlining">Internal</span> CSS method is
+      used using the HTML tag called &lt;style&gt;. We use this tag inside the
+      &lt;head&gt; element of a HTML file and we write corresponding CSS code
+      inside the &lt;style&gt; tag. let's see an example
+    </p>
+    <pre>
+    <code>
+        &lt;head&gt;
+        ....
+        &lt;style&gt;
+
+            //CSS Code
+
+        &lt;/style&gt;
+        ....
+        &lt;/head&gt;
+    </code>
+    </pre>
+    <!-- CSS Selctors -->
+    <h1 class="pageHead" id="cssSelectors">CSS Selectors</h1>
+    <h4 class="underlining">Why we using "CSS Selectors"?</h4>
+    <p>
+      CSS selectors are used to select the HTML elements you want to style. CSS
+      Selectors only needed for
+      <span class="underlining">External CSS</span> method and
+      <span class="underlining">Internal CSS</span> method.
+    </p>
+    <h4 class="underlining">We can divide CSS selectors into 5 categories:</h4>
+    <ul>
+      <li class="LittlePaddingLi">
+        <a
+          class="colorChange"
+          href="./pages/subpages/simple-selectors.html"
+          target="_blank"
+          >Simple selectors (select elements based on name, id, class)</a
+        >
+      </li>
+      <li class="LittlePaddingLi">
+        <a
+          class="colorChange"
+          href="./pages/subpages/combinator-selectors.html"
+          target="_blank"
+          >Combinator selectors (select elements based on a specific
+          relationship between them)</a
+        >
+      </li>
+      <li class="LittlePaddingLi">
+        <a
+          class="colorChange"
+          href="./pages/subpages/pseudoclass-selectors.html"
+          target="_blank"
+          >Pseudo-class selectors (select elements based on a certain state)</a
+        >
+      </li>
+      <li class="LittlePaddingLi">
+        <a
+          class="colorChange"
+          href="./pages/subpages/pseudoelements-selectors.html"
+          target="_blank"
+          >Pseudo-elements selectors (select and style a part of an element)</a
+        >
+      </li>
+      <li class="LittlePaddingLi">
+        <a
+          class="colorChange"
+          href="./pages/subpages/attribute-selectors.html"
+          target="_blank"
+          >Attribute selectors (select elements based on an attribute or
+          attribute value)</a
+        >
+      </li>
+    </ul>
+    <br />
+    <h1 class="pageHead">CSS Syntax</h1>
+    <h4>A CSS rule consists of a selector and a declaration block.</h4>
+    <p>
+      The selector points to the HTML element you want to style.<br />
+      <br />The declaration block contains one or more declarations separated by
+      semicolons.<br /><br />
+      Each declaration includes a CSS property name and a value, separated by a
+      colon.<br /><br />
+      Multiple CSS declarations are separated with semicolons, and declaration
+      blocks are surrounded by curly braces.
+    </p>
+    <img src="./assets/121212121-removebg-preview.png" class="imgCSS" />
+    <h3>Example</h3>
+    <p>
+      In this example all &lt;p&gt; elements will be center-aligned, with a red
+      text color:
+    </p>
+    <pre>
+      <code>
+p {
+  color: red;
+  text-align: center;
+}
+      </code>
+    </pre>
+
+    <h3>Example Explained</h3>
+    <ul>
+      <li>
+        "p" is a selector in CSS (it points to the HTML element you want to
+        style: &lt;p&gt;).
+      </li>
+      <li>"color" is a property, and red is the property value</li>
+      <li>"text-align" is a property, and center is the property value</li>
+    </ul>
+  </body>
+  <script src="./style/script.js"></script>
+</html>

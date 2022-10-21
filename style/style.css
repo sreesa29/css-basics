@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+* {
+  font-family: "Spline Sans Mono", monospace;
+}
+.sticky-top {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background: #8a4e00; /* fallback for old browsers */
+
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  justify-items: flex-start;
+  align-items: baseline;
+  gap: 20px;
+}
+#checkboxD {
+  font-size: xx-large;
+}
+
+.firstFlexChild {
+  flex: 2;
+  font-family: "Passions Conflict", cursive;
+  font-size: xx-large;
+}
+.secondFlexChild {
+  flex: 2;
+  font-size: large;
+  font-family: "DM Serif Display", serif;
+}
+.thirdFlexChild {
+  flex: 0;
+}
+
+body {
+  padding-right: 10%;
+  padding-left: 10%;
+  text-align: justify;
+}
+.pageHead {
+  text-align: center;
+}
+
+.pageHead:hover {
+  text-decoration: underline;
+}
+.underlining {
+  text-decoration: underline;
+}
+pre {
+  display: flex;
+  background-color: rgb(46, 39, 39);
+  color: white;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.colorChange {
+  color: tomato;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.colorChange:hover {
+  color: rgb(2, 0, 136);
+  background-color: rgb(226, 194, 10);
+}
+.LittlePaddingLi {
+  padding-top: 10px;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgb(146, 122, 122);
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.imgCSS {
+  width: 50vw;
+}
+.boxmodel {
+  width: 40vw;
+}
+
+.important {
+  padding: 10px;
+  background-color: #f8d253;
+  color: #000;
+}
+
+.question {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #dfc7ff;
+  color: #000;
+}
+
+.absolutePos {
+  position: absolute;
+}
+.relative01 {
+  position: relative;
+  top: 35px;
+}
+#hiddenSuccess {
+  position: relative;
+  visibility: hidden;
+  top: 35px;
+  color: rgb(6, 102, 14);
+}
+#hiddenIncorrect {
+  position: relative;
+  visibility: hidden;
+  top: 0px;
+  color: rgb(107, 0, 0);
+}
+#hiddenAnswer {
+  position: relative;
+  top: 0px;
+  visibility: hidden;
+  color: rgb(0, 0, 0);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+#checkboxD {
+  accent-color: rgb(46, 39, 39);
+}
+
+.navMain {
+  display: flex;
+  flex-wrap: wrap;
+  background: #916f00; /* fallback for old browsers */
+  border-radius: 8px;
+  justify-content: space-around;
+  padding: 30px;
+}
+.navItems,
+.navItems > a {
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.navItems {
+  border-radius: 20px;
+  border: 1px solid #333;
+}
+
+.navItems:nth-child(2) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.navItems:nth-child(1) {
+  margin-right: auto;
+}
+
+.navItems:hover {
+  background-color: #333;
+}
+#pdfview {
+  width: 75vw;
+  height: 100vh;
+}

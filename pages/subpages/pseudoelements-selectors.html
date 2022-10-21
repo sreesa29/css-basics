@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Pseudo-Elements Selectors :: Sree Sankar</title>
+  </head>
+  <body>
+    <h1 class="pageHead">Pseudo-Elements Selectors</h1>
+    <h3 class="underlining">
+      A CSS pseudo-element is used to style specified parts of an element.
+    </h3>
+    <p>For example, it can be used to:</p>
+    <ul>
+      <li>Style the first letter, or line, of an element</li>
+      <li>Insert content before, or after, the content of an element</li>
+    </ul>
+
+    <h3>Syntax</h3>
+    <p>The syntax of pseudo-elements:</p>
+    <pre>
+      <code>
+  selector::pseudo-element {
+    //CSS Code
+  }
+      </code>
+    </pre>
+
+    <p>
+      Notice <b>the double colon notation - ::first-line </b> versus :first-line
+      <br />
+      The double colon replaced the single-colon notation for pseudo-elements in
+      CSS3. This was an attempt from W3C to distinguish between pseudo-classes
+      and pseudo-elements.
+      <br />
+      The single-colon syntax was used for both pseudo-classes and
+      pseudo-elements in CSS2 and CSS1.
+      <br />
+      For backward compatibility, the single-colon syntax is acceptable for CSS2
+      and CSS1 pseudo-elements.
+    </p>
+
+    <p>Let's crack this</p>
+
+    <div style="overflow-x: auto">
+      <table>
+        <tr>
+          <th>Selector</th>
+          <th>Example</th>
+          <th>Example description</th>
+        </tr>
+        <tr>
+          <td>::after</td>
+          <td>p::after</td>
+          <td>Insert something after the content of each &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td>::before</td>
+          <td>p::before</td>
+          <td>Insert something before the content of each &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td>::first-letter</td>
+          <td>p::first-letter</td>
+          <td>Selects the first letter of each &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td>::first-line</td>
+          <td>p::first-line</td>
+          <td>Selects the first line of each &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td>::marker</td>
+          <td>::marker</td>
+          <td>Selects the markers of list items</td>
+        </tr>
+        <tr>
+          <td>::selection</td>
+          <td>p::selection</td>
+          <td>Selects the portion of an element that is selected by a user</td>
+        </tr>
+        <tr></tr>
+      </table>
+    </div>
+  </body>
+  <script src="../../style/script.js"></script>
+</html>

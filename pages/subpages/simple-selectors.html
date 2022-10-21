@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Simple Selectors :: Sree Sankar</title>
+  </head>
+  <body>
+    <h1 class="pageHead">The CSS simple Selector</h1>
+    <h3 class="underlining">6 type of CSS Simple Selectors are here</h3>
+    <p>Let's crack this</p>
+    <div style="overflow-x: auto">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>How to represent?</th>
+          <th>Example code for CSS</th>
+          <th>Example code for HTML</th>
+          <th>Usage</th>
+        </tr>
+        <!-- id -->
+        <tr>
+          <td>ID Selector</td>
+          <td>#ID_NAME</td>
+          <td>
+            <pre>
+              <code>
+ #paragraphID{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;p id="paragraphID"&gt; 
+   {any content}
+&lt;/p&gt;
+              </code>
+            </pre>
+          </td>
+          <td>
+            ID is using for designing individual element. This is not a RULE.
+            sometimes we use single ID name for multiple tags also. In CSS we
+            use '#' infront of ID name for respresenting, It is "ID" name.
+            <br />
+            Note: A ID name cannot start with a number!
+          </td>
+        </tr>
+        <!-- id close -->
+        <!-- class  -->
+        <tr>
+          <td>Class Selector</td>
+          <td>.class_name</td>
+          <td>
+            <pre>
+              <code>
+ .paragraphClass{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;h1 class="paragraphClass"&gt; 
+   {any content}
+&lt;/h1&gt;
+              </code>
+            </pre>
+          </td>
+          <td>
+            CLASS is using for designing group of elements. This is not a RULE.
+            sometimes we use single class name for single tag also. In CSS we
+            use '.' infront of class name for respresenting, It is "class" name.
+            <br />
+            Note: A class name cannot start with a number!
+          </td>
+        </tr>
+        <!-- class clods -->
+        <!-- CSS ELEMENT CLASS -->
+        <tr>
+          <td>Element Class</td>
+          <td>TAG_NAME.CLASS_NAME</td>
+          <td>
+            <pre>
+              <code>
+ h2.headClass{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;h2 class="headClass"&gt; 
+   {any content}
+&lt;/h2&gt;
+              </code>
+            </pre>
+          </td>
+          <td>
+            Element class selector using to select the particular tag have a
+            particular classname. In Example; CSS property will be applied on
+            the h2 tags that have the class name "headClass". if there's a "P"
+            tag that have classname "headClass" then this selector will exclude
+            that "p" tag.
+          </td>
+        </tr>
+        <!-- css element class close -->
+        <!-- Universal Selector -->
+        <tr>
+          <td>Universal Selector</td>
+          <td>*</td>
+          <td>
+            <pre>
+              <code>
+ *{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>This will be applied on the whole HTML page.</td>
+          <td>
+            Universal selector is using for styling whole page. It'll applied on
+            all the elements in the page. for eg: Avoiding Browser default
+            padding and margin injection. We do this all time
+            <pre>
+              <code>
+*{
+    padding:0;
+    marging:0;
+}
+              </code>
+          </pre>
+          </td>
+        </tr>
+        <!-- Universal Selector close -->
+        <!-- element tag -->
+        <tr>
+          <td>Element Selector</td>
+          <td>TAG_NAME</td>
+          <td>
+            <pre>
+              <code>
+ h6{
+  ---------
+  CSS Code
+  ---------
+}
+              </code>
+              </pre>
+          </td>
+          <td>
+            <pre>
+              <code>
+&lt;h6&gt; 
+   {any content}
+&lt;/h6&gt;
+              </code>
+            </pre>
+          </td>
+          <td>
+            Element selector is using for select specific tag name. For eg if we
+            select the h3, this will select all the h3 element on the HTML page.
+          </td>
+        </tr>
+
+        <!-- element tag close -->
+      </table>
+    </div>
+    <h3 class="underlining">Grouping of Elements</h3>
+    <p>
+      How we write if 3 elements have same style? or more than 10 elements have
+      same style?
+    </p>
+    <p>
+      Do we write one by one? No! We can do by putting coma (,) in-between them!
+      for eg:
+    </p>
+    <pre>
+          <code>
+p, .pClass, #h2IdClass{
+    ---------
+    css code
+    ---------
+}
+          </code>
+      </pre>
+    <p>
+      This CSS will make same style for "p" tag, tags that have "pClass" as
+      class name, and tags that have "h2IdClass" as tag name;
+    </p>
+  </body>
+  <script src="../../style/script.js"></script>
+</html>
